@@ -1,8 +1,8 @@
 <?php
 
-namespace Gmammadov\SupportChat\Settings;
+namespace Gismatul\SupportChat\Settings;
 
-use Gmammadov\SupportChat\Enums\FieldMode;
+use Gismatul\SupportChat\Enums\FieldMode;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Support\Carbon;
 use Throwable;

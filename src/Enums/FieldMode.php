@@ -1,6 +1,6 @@
 <?php
 
-namespace Gmammadov\SupportChat\Enums;
+namespace Gismatul\SupportChat\Enums;
 
 /**
  * How an optional contact input (email, phone) appears in the widget's intro form.

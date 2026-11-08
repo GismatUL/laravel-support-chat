@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Support;
+namespace Gismatul\SupportChat\Support;
 
-use Gmammadov\SupportChat\Settings\ChatSettings;
-use Gmammadov\SupportChat\SupportChat;
+use Gismatul\SupportChat\Settings\ChatSettings;
+use Gismatul\SupportChat\SupportChat;
 use Illuminate\Http\Request;
 
 /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Telegram;
+namespace Gismatul\SupportChat\Telegram;
 
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Models\Message;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Models\Message;
 
 /**
  * Builds Telegram HTML messages. Every customer- or admin-provided value is escaped,

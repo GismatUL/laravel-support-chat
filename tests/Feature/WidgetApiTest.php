@@ -1,10 +1,10 @@
 <?php
 
-namespace Gmammadov\SupportChat\Tests\Feature;
+namespace Gismatul\SupportChat\Tests\Feature;
 
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Settings\ChatSettings;
-use Gmammadov\SupportChat\Tests\TestCase;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Settings\ChatSettings;
+use Gismatul\SupportChat\Tests\TestCase;
 
 class WidgetApiTest extends TestCase
 {

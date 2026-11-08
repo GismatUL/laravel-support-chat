@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Console;
+namespace Gismatul\SupportChat\Console;
 
-use Gmammadov\SupportChat\Telegram\TelegramClient;
-use Gmammadov\SupportChat\Telegram\TelegramException;
+use Gismatul\SupportChat\Telegram\TelegramClient;
+use Gismatul\SupportChat\Telegram\TelegramException;
 use Illuminate\Console\Command;
 
 class TelegramWebhookCommand extends Command

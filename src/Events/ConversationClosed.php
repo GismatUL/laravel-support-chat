@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Events;
+namespace Gismatul\SupportChat\Events;
 
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Models\Message;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Models\Message;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Foundation\Events\Dispatchable;
 

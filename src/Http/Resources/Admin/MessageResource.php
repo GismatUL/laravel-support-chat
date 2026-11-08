@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Resources\Admin;
+namespace Gismatul\SupportChat\Http\Resources\Admin;
 
-use Gmammadov\SupportChat\Enums\TelegramDeliveryStatus;
-use Gmammadov\SupportChat\Models\Message;
+use Gismatul\SupportChat\Enums\TelegramDeliveryStatus;
+use Gismatul\SupportChat\Models\Message;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Controllers\Api;
+namespace Gismatul\SupportChat\Http\Controllers\Api;
 
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;

@@ -1,5 +1,5 @@
 /*!
- * gmammadov/laravel-support-chat widget
+ * gismatul/laravel-support-chat widget
  * Plain JS, no dependencies. Messages are rendered with textContent only, never innerHTML.
  *
  * Usage:

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gmammadov\SupportChat\Models;
+namespace Gismatul\SupportChat\Models;
 
-use Gmammadov\SupportChat\Enums\ConversationStatus;
+use Gismatul\SupportChat\Enums\ConversationStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;

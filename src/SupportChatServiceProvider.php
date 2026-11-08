@@ -1,16 +1,16 @@
 <?php
 
-namespace Gmammadov\SupportChat;
+namespace Gismatul\SupportChat;
 
-use Gmammadov\SupportChat\Console\ExpireConversationsCommand;
-use Gmammadov\SupportChat\Console\InstallCommand;
-use Gmammadov\SupportChat\Console\RetryTelegramDeliveryCommand;
-use Gmammadov\SupportChat\Console\TelegramWebhookCommand;
-use Gmammadov\SupportChat\Http\Middleware\ThrottleChatRequests;
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Policies\ConversationPolicy;
-use Gmammadov\SupportChat\Settings\ChatSettings;
-use Gmammadov\SupportChat\Telegram\TelegramClient;
+use Gismatul\SupportChat\Console\ExpireConversationsCommand;
+use Gismatul\SupportChat\Console\InstallCommand;
+use Gismatul\SupportChat\Console\RetryTelegramDeliveryCommand;
+use Gismatul\SupportChat\Console\TelegramWebhookCommand;
+use Gismatul\SupportChat\Http\Middleware\ThrottleChatRequests;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Policies\ConversationPolicy;
+use Gismatul\SupportChat\Settings\ChatSettings;
+use Gismatul\SupportChat\Telegram\TelegramClient;
 use Illuminate\Cache\RateLimiter;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Console\Scheduling\Schedule;

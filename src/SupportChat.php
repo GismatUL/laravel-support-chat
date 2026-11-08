@@ -1,10 +1,10 @@
 <?php
 
-namespace Gmammadov\SupportChat;
+namespace Gismatul\SupportChat;
 
 use Closure;
-use Gmammadov\SupportChat\Http\Controllers\Admin\ConversationController;
-use Gmammadov\SupportChat\Http\Controllers\Admin\SettingsController;
+use Gismatul\SupportChat\Http\Controllers\Admin\ConversationController;
+use Gismatul\SupportChat\Http\Controllers\Admin\SettingsController;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -44,7 +44,7 @@ class SupportChat
      *
      * You can also define the gates (supportChat.view, supportChat.reply, supportChat.manage) yourself.
      * Without either, access is only granted in the "local" environment, or through an admin-panel
-     * integration such as gmammadov/nova-support-chat (which allows users that can access Nova).
+     * integration such as gismatul/nova-support-chat (which allows users that can access Nova).
      */
     public static function authorizeUsing(?Closure $callback): void
     {

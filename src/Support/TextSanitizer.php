@@ -1,6 +1,6 @@
 <?php
 
-namespace Gmammadov\SupportChat\Support;
+namespace Gismatul\SupportChat\Support;
 
 class TextSanitizer
 {

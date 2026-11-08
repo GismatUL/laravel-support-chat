@@ -1,10 +1,10 @@
 <?php
 
-namespace Gmammadov\SupportChat\Tests\Feature;
+namespace Gismatul\SupportChat\Tests\Feature;
 
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Models\Message;
-use Gmammadov\SupportChat\Tests\TestCase;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Models\Message;
+use Gismatul\SupportChat\Tests\TestCase;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Resources\Admin;
+namespace Gismatul\SupportChat\Http\Resources\Admin;
 
-use Gmammadov\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Models\Conversation;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**

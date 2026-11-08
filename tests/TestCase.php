@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Tests;
+namespace Gismatul\SupportChat\Tests;
 
-use Gmammadov\SupportChat\SupportChat;
-use Gmammadov\SupportChat\SupportChatServiceProvider;
+use Gismatul\SupportChat\SupportChat;
+use Gismatul\SupportChat\SupportChatServiceProvider;
 use Illuminate\Auth\GenericUser;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;

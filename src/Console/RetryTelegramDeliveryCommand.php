@@ -1,11 +1,11 @@
 <?php
 
-namespace Gmammadov\SupportChat\Console;
+namespace Gismatul\SupportChat\Console;
 
-use Gmammadov\SupportChat\Enums\TelegramDeliveryStatus;
-use Gmammadov\SupportChat\Jobs\SendMessageToTelegram;
-use Gmammadov\SupportChat\Models\Message;
-use Gmammadov\SupportChat\Telegram\TelegramClient;
+use Gismatul\SupportChat\Enums\TelegramDeliveryStatus;
+use Gismatul\SupportChat\Jobs\SendMessageToTelegram;
+use Gismatul\SupportChat\Models\Message;
+use Gismatul\SupportChat\Telegram\TelegramClient;
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 

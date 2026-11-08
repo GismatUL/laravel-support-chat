@@ -1,11 +1,11 @@
 <?php
 
-namespace Gmammadov\SupportChat\Console;
+namespace Gismatul\SupportChat\Console;
 
-use Gmammadov\SupportChat\Enums\ConversationStatus;
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Services\ChatService;
-use Gmammadov\SupportChat\Settings\ChatSettings;
+use Gismatul\SupportChat\Enums\ConversationStatus;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Services\ChatService;
+use Gismatul\SupportChat\Settings\ChatSettings;
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 

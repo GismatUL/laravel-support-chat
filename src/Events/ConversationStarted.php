@@ -1,8 +1,8 @@
 <?php
 
-namespace Gmammadov\SupportChat\Events;
+namespace Gismatul\SupportChat\Events;
 
-use Gmammadov\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Models\Conversation;
 use Illuminate\Foundation\Events\Dispatchable;
 
 class ConversationStarted

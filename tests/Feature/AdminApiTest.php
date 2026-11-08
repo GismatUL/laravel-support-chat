@@ -1,10 +1,10 @@
 <?php
 
-namespace Gmammadov\SupportChat\Tests\Feature;
+namespace Gismatul\SupportChat\Tests\Feature;
 
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\SupportChat;
-use Gmammadov\SupportChat\Tests\TestCase;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\SupportChat;
+use Gismatul\SupportChat\Tests\TestCase;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Http;
@@ -156,7 +156,7 @@ class AdminApiTest extends TestCase
         $this->startConversation();
         Conversation::query()->update(['last_message_at' => now()->subHours(30)]);
 
-        app(\Gmammadov\SupportChat\Settings\ChatSettings::class)->save(['auto_close_hours' => 24]);
+        app(\Gismatul\SupportChat\Settings\ChatSettings::class)->save(['auto_close_hours' => 24]);
 
         $this->artisan('support-chat:expire')->assertSuccessful();
 

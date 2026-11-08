@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Policies;
+namespace Gismatul\SupportChat\Policies;
 
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\SupportChat;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\SupportChat;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Gate;
 

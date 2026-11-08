@@ -1,16 +1,16 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Controllers\Api;
+namespace Gismatul\SupportChat\Http\Controllers\Api;
 
-use Gmammadov\SupportChat\Http\Middleware\ResolveConversation;
-use Gmammadov\SupportChat\Http\Requests\SendMessageRequest;
-use Gmammadov\SupportChat\Http\Requests\StartConversationRequest;
-use Gmammadov\SupportChat\Http\Resources\ConversationResource;
-use Gmammadov\SupportChat\Http\Resources\MessageResource;
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Services\ChatService;
-use Gmammadov\SupportChat\Support\WidgetConfig;
-use Gmammadov\SupportChat\SupportChat;
+use Gismatul\SupportChat\Http\Middleware\ResolveConversation;
+use Gismatul\SupportChat\Http\Requests\SendMessageRequest;
+use Gismatul\SupportChat\Http\Requests\StartConversationRequest;
+use Gismatul\SupportChat\Http\Resources\ConversationResource;
+use Gismatul\SupportChat\Http\Resources\MessageResource;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Services\ChatService;
+use Gismatul\SupportChat\Support\WidgetConfig;
+use Gismatul\SupportChat\SupportChat;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

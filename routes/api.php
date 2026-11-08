@@ -1,10 +1,10 @@
 <?php
 
-use Gmammadov\SupportChat\Http\Controllers\Api\AssetController;
-use Gmammadov\SupportChat\Http\Controllers\Api\ChatController;
-use Gmammadov\SupportChat\Http\Controllers\Api\TelegramWebhookController;
-use Gmammadov\SupportChat\Http\Middleware\ResolveConversation;
-use Gmammadov\SupportChat\Http\Middleware\ThrottleChatRequests;
+use Gismatul\SupportChat\Http\Controllers\Api\AssetController;
+use Gismatul\SupportChat\Http\Controllers\Api\ChatController;
+use Gismatul\SupportChat\Http\Controllers\Api\TelegramWebhookController;
+use Gismatul\SupportChat\Http\Middleware\ResolveConversation;
+use Gismatul\SupportChat\Http\Middleware\ThrottleChatRequests;
 use Illuminate\Support\Facades\Route;
 
 // Stateless JSON endpoints (no session, cookies or CSRF): conversation access is authorised by the

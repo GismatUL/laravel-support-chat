@@ -1,19 +1,19 @@
 <?php
 
-namespace Gmammadov\SupportChat\Services;
+namespace Gismatul\SupportChat\Services;
 
-use Gmammadov\SupportChat\Enums\ConversationStatus;
-use Gmammadov\SupportChat\Enums\MessageSender;
-use Gmammadov\SupportChat\Enums\TelegramDeliveryStatus;
-use Gmammadov\SupportChat\Events\ConversationClosed;
-use Gmammadov\SupportChat\Events\ConversationStarted;
-use Gmammadov\SupportChat\Events\CustomerMessageReceived;
-use Gmammadov\SupportChat\Events\OperatorReplied;
-use Gmammadov\SupportChat\Jobs\SendMessageToTelegram;
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Models\Message;
-use Gmammadov\SupportChat\SupportChat;
-use Gmammadov\SupportChat\Telegram\TelegramClient;
+use Gismatul\SupportChat\Enums\ConversationStatus;
+use Gismatul\SupportChat\Enums\MessageSender;
+use Gismatul\SupportChat\Enums\TelegramDeliveryStatus;
+use Gismatul\SupportChat\Events\ConversationClosed;
+use Gismatul\SupportChat\Events\ConversationStarted;
+use Gismatul\SupportChat\Events\CustomerMessageReceived;
+use Gismatul\SupportChat\Events\OperatorReplied;
+use Gismatul\SupportChat\Jobs\SendMessageToTelegram;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Models\Message;
+use Gismatul\SupportChat\SupportChat;
+use Gismatul\SupportChat\Telegram\TelegramClient;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\UniqueConstraintViolationException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gmammadov\SupportChat\Enums;
+namespace Gismatul\SupportChat\Enums;
 
 enum MessageSender: string
 {

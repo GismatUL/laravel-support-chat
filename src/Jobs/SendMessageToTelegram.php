@@ -1,13 +1,13 @@
 <?php
 
-namespace Gmammadov\SupportChat\Jobs;
+namespace Gismatul\SupportChat\Jobs;
 
-use Gmammadov\SupportChat\Enums\MessageSender;
-use Gmammadov\SupportChat\Enums\TelegramDeliveryStatus;
-use Gmammadov\SupportChat\Models\Message;
-use Gmammadov\SupportChat\Telegram\TelegramClient;
-use Gmammadov\SupportChat\Telegram\TelegramException;
-use Gmammadov\SupportChat\Telegram\TelegramMessageFormatter;
+use Gismatul\SupportChat\Enums\MessageSender;
+use Gismatul\SupportChat\Enums\TelegramDeliveryStatus;
+use Gismatul\SupportChat\Models\Message;
+use Gismatul\SupportChat\Telegram\TelegramClient;
+use Gismatul\SupportChat\Telegram\TelegramException;
+use Gismatul\SupportChat\Telegram\TelegramMessageFormatter;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;

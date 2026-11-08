@@ -1,8 +1,8 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Requests;
+namespace Gismatul\SupportChat\Http\Requests;
 
-use Gmammadov\SupportChat\Support\TextSanitizer;
+use Gismatul\SupportChat\Support\TextSanitizer;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**

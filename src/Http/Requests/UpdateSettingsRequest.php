@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Requests;
+namespace Gismatul\SupportChat\Http\Requests;
 
-use Gmammadov\SupportChat\Enums\FieldMode;
-use Gmammadov\SupportChat\Settings\ChatSettings;
+use Gismatul\SupportChat\Enums\FieldMode;
+use Gismatul\SupportChat\Settings\ChatSettings;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

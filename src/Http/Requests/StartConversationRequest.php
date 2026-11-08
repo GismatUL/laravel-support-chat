@@ -1,10 +1,10 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Requests;
+namespace Gismatul\SupportChat\Http\Requests;
 
-use Gmammadov\SupportChat\Enums\FieldMode;
-use Gmammadov\SupportChat\Settings\ChatSettings;
-use Gmammadov\SupportChat\Support\TextSanitizer;
+use Gismatul\SupportChat\Enums\FieldMode;
+use Gismatul\SupportChat\Settings\ChatSettings;
+use Gismatul\SupportChat\Support\TextSanitizer;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StartConversationRequest extends FormRequest

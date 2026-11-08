@@ -1,6 +1,6 @@
 <?php
 
-namespace Gmammadov\SupportChat\Console;
+namespace Gismatul\SupportChat\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
@@ -38,7 +38,7 @@ class InstallCommand extends Command
         $this->line('     or, on another frontend:  <script src="'.url(config('support-chat.routes.api.prefix').'/assets/support-chat.js').'"');
         $this->line('                                       data-config-url="'.url(config('support-chat.routes.api.prefix').'/config').'" defer></script>');
         $this->line('  5. Make sure the scheduler runs (php artisan schedule:run every minute).');
-        $this->line('  6. Grant admin access: SupportChat::authorizeUsing(fn ($user, $ability) => ...) or install gmammadov/nova-support-chat.');
+        $this->line('  6. Grant admin access: SupportChat::authorizeUsing(fn ($user, $ability) => ...) or install gismatul/nova-support-chat.');
 
         return self::SUCCESS;
     }

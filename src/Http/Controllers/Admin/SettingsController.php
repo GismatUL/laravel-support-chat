@@ -1,10 +1,10 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Controllers\Admin;
+namespace Gismatul\SupportChat\Http\Controllers\Admin;
 
-use Gmammadov\SupportChat\Http\Requests\UpdateSettingsRequest;
-use Gmammadov\SupportChat\Settings\ChatSettings;
-use Gmammadov\SupportChat\Telegram\TelegramClient;
+use Gismatul\SupportChat\Http\Requests\UpdateSettingsRequest;
+use Gismatul\SupportChat\Settings\ChatSettings;
+use Gismatul\SupportChat\Telegram\TelegramClient;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 

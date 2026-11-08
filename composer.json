@@ -1,5 +1,5 @@
 {
-    "name": "gmammadov/laravel-support-chat",
+    "name": "gismatul/laravel-support-chat",
     "description": "Website live-chat widget for Laravel where your team answers from Telegram or from an admin panel.",
     "keywords": [
         "laravel",
@@ -28,16 +28,16 @@
         "phpunit/phpunit": "^10.0|^11.0|^12.0"
     },
     "suggest": {
-        "gmammadov/nova-support-chat": "Laravel Nova admin panel for the support chat."
+        "gismatul/nova-support-chat": "Laravel Nova admin panel for the support chat."
     },
     "autoload": {
         "psr-4": {
-            "Gmammadov\\SupportChat\\": "src/"
+            "Gismatul\\SupportChat\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gmammadov\\SupportChat\\Tests\\": "tests/"
+            "Gismatul\\SupportChat\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -46,7 +46,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gmammadov\\SupportChat\\SupportChatServiceProvider"
+                "Gismatul\\SupportChat\\SupportChatServiceProvider"
             ]
         }
     },

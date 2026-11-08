@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Middleware;
+namespace Gismatul\SupportChat\Http\Middleware;
 
 use Closure;
-use Gmammadov\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Models\Conversation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;

@@ -13,7 +13,7 @@ Requires PHP 8.2+ (a version the PHP team still supports) and Laravel 10, 11, 12
 ## Installation
 
 ```bash
-composer require gmammadov/laravel-support-chat
+composer require gismatul/laravel-support-chat
 php artisan support-chat:install
 ```
 
@@ -105,7 +105,7 @@ The admin side is a JSON API (`/support-chat/admin/...` by default, behind `web`
 **Access is denied by default outside the `local` environment.** Grant it in a service provider:
 
 ```php
-use Gmammadov\SupportChat\SupportChat;
+use Gismatul\SupportChat\SupportChat;
 
 SupportChat::authorizeUsing(function ($user, string $ability) {
     return $user->is_admin;                                      // all abilities
@@ -150,7 +150,7 @@ SupportChat::resolveCustomerUsing(fn (Request $request) => ($user = $request->us
 
 ## Events
 
-`ConversationStarted`, `CustomerMessageReceived`, `OperatorReplied` (with `$admin` when answered from a panel) and `ConversationClosed` (`$reason` is `closed` or `expired`), all in `Gmammadov\SupportChat\Events`. Use them for notifications, analytics or broadcasting.
+`ConversationStarted`, `CustomerMessageReceived`, `OperatorReplied` (with `$admin` when answered from a panel) and `ConversationClosed` (`$reason` is `closed` or `expired`), all in `Gismatul\SupportChat\Events`. Use them for notifications, analytics or broadcasting.
 
 ## Configuration
 

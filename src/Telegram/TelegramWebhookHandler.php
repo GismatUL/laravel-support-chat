@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Telegram;
+namespace Gismatul\SupportChat\Telegram;
 
-use Gmammadov\SupportChat\Models\Message;
-use Gmammadov\SupportChat\Services\ChatService;
+use Gismatul\SupportChat\Models\Message;
+use Gismatul\SupportChat\Services\ChatService;
 use Illuminate\Support\Facades\Log;
 
 /**

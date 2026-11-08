@@ -1,8 +1,8 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Controllers\Api;
+namespace Gismatul\SupportChat\Http\Controllers\Api;
 
-use Gmammadov\SupportChat\Telegram\TelegramWebhookHandler;
+use Gismatul\SupportChat\Telegram\TelegramWebhookHandler;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gmammadov\SupportChat\Telegram;
+namespace Gismatul\SupportChat\Telegram;
 
 use Illuminate\Http\Client\Factory as HttpFactory;
 use Throwable;

@@ -1,15 +1,15 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Controllers\Admin;
+namespace Gismatul\SupportChat\Http\Controllers\Admin;
 
-use Gmammadov\SupportChat\Enums\ConversationStatus;
-use Gmammadov\SupportChat\Http\Requests\SendMessageRequest;
-use Gmammadov\SupportChat\Http\Resources\Admin\ConversationResource;
-use Gmammadov\SupportChat\Http\Resources\Admin\MessageResource;
-use Gmammadov\SupportChat\Models\Conversation;
-use Gmammadov\SupportChat\Services\ChatService;
-use Gmammadov\SupportChat\SupportChat;
-use Gmammadov\SupportChat\Telegram\TelegramClient;
+use Gismatul\SupportChat\Enums\ConversationStatus;
+use Gismatul\SupportChat\Http\Requests\SendMessageRequest;
+use Gismatul\SupportChat\Http\Resources\Admin\ConversationResource;
+use Gismatul\SupportChat\Http\Resources\Admin\MessageResource;
+use Gismatul\SupportChat\Models\Conversation;
+use Gismatul\SupportChat\Services\ChatService;
+use Gismatul\SupportChat\SupportChat;
+use Gismatul\SupportChat\Telegram\TelegramClient;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;

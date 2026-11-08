@@ -1,6 +1,6 @@
 <?php
 
-namespace Gmammadov\SupportChat\Http\Middleware;
+namespace Gismatul\SupportChat\Http\Middleware;
 
 use Illuminate\Routing\Middleware\ThrottleRequests;
 

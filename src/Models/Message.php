@@ -1,9 +1,9 @@
 <?php
 
-namespace Gmammadov\SupportChat\Models;
+namespace Gismatul\SupportChat\Models;
 
-use Gmammadov\SupportChat\Enums\MessageSender;
-use Gmammadov\SupportChat\Enums\TelegramDeliveryStatus;
+use Gismatul\SupportChat\Enums\MessageSender;
+use Gismatul\SupportChat\Enums\TelegramDeliveryStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
