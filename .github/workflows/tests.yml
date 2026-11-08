@@ -18,10 +18,10 @@ jobs:
         include:
           # Laravel 10 and 11 are end-of-life with unpatched advisories, which Composer >= 2.9 refuses
           # to install by default. Apps still run them, so we keep testing against them.
-          - { php: '8.1', laravel: '10.*', testbench: '8.*', eol: true }
-          - { php: '8.2', laravel: '11.*', testbench: '9.*', eol: true }
-          - { php: '8.3', laravel: '12.*', testbench: '10.*', eol: false }
-          - { php: '8.4', laravel: '13.*', testbench: '11.*', eol: false }
+          - { php: '8.2', laravel: '10.*', testbench: '8.*', eol: true }
+          - { php: '8.3', laravel: '11.*', testbench: '9.*', eol: true }
+          - { php: '8.4', laravel: '12.*', testbench: '10.*', eol: false }
+          - { php: '8.5', laravel: '13.*', testbench: '11.*', eol: false }
 
     name: PHP ${{ matrix.php }} / Laravel ${{ matrix.laravel }}
 
