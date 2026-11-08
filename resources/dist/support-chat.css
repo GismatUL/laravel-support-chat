@@ -1,0 +1,318 @@
+.sc-chat,
+.sc-chat *,
+.sc-chat *::before,
+.sc-chat *::after {
+    box-sizing: border-box;
+}
+
+.sc-chat {
+    --sc-chat-primary: #2563eb;
+    --sc-chat-shadow: rgba(37, 99, 235, .35);
+    --sc-chat-offset-x: 24px;
+    --sc-chat-offset-y: 24px;
+    --sc-chat-z-index: 2147483000;
+    --sc-chat-text: #1f2328;
+    --sc-chat-muted: #6b7280;
+    --sc-chat-border: #e5e7eb;
+    --sc-chat-bg: #f6f7f9;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--sc-chat-text);
+}
+
+.sc-chat [hidden] {
+    display: none !important;
+}
+
+.sc-chat__launcher {
+    position: fixed;
+    inset-inline-end: var(--sc-chat-offset-x);
+    bottom: var(--sc-chat-offset-y);
+    z-index: var(--sc-chat-z-index);
+    width: 56px;
+    height: 56px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--sc-chat-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px var(--sc-chat-shadow);
+    transition: transform .2s ease;
+}
+
+.sc-chat__launcher:hover {
+    transform: scale(1.06);
+}
+
+.sc-chat__launcher:focus-visible,
+.sc-chat button:focus-visible,
+.sc-chat input:focus-visible,
+.sc-chat textarea:focus-visible {
+    outline: 2px solid var(--sc-chat-primary);
+    outline-offset: 2px;
+}
+
+.sc-chat__icon-close,
+.sc-chat.is-open .sc-chat__icon-open {
+    display: none;
+}
+
+.sc-chat.is-open .sc-chat__icon-close {
+    display: block;
+}
+
+.sc-chat__badge {
+    position: absolute;
+    top: 4px;
+    inset-inline-end: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e11d48;
+    border: 2px solid #fff;
+}
+
+.sc-chat__panel {
+    position: fixed;
+    inset-inline-end: var(--sc-chat-offset-x);
+    bottom: calc(var(--sc-chat-offset-y) + 68px);
+    z-index: calc(var(--sc-chat-z-index) + 1);
+    width: 370px;
+    height: 540px;
+    max-height: calc(100vh - var(--sc-chat-offset-y) - 92px);
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sc-chat__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--sc-chat-primary);
+    color: #fff;
+}
+
+.sc-chat__title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.sc-chat__subtitle {
+    font-size: 12px;
+    opacity: .9;
+}
+
+.sc-chat__close {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.sc-chat__body {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--sc-chat-bg);
+    padding: 14px;
+    overscroll-behavior: contain;
+}
+
+.sc-chat__messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sc-chat__msg {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+}
+
+.sc-chat__msg--customer {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.sc-chat__msg--operator {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.sc-chat__msg--system {
+    align-self: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.sc-chat__bubble {
+    padding: 8px 12px;
+    border-radius: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.sc-chat__msg--customer .sc-chat__bubble {
+    background: var(--sc-chat-primary);
+    color: #fff;
+    border-end-end-radius: 4px;
+}
+
+.sc-chat__msg--operator .sc-chat__bubble {
+    background: #fff;
+    border: 1px solid var(--sc-chat-border);
+    border-end-start-radius: 4px;
+}
+
+.sc-chat__msg--system .sc-chat__bubble {
+    background: transparent;
+    color: var(--sc-chat-muted);
+    font-size: 12px;
+    text-align: center;
+    padding: 2px 8px;
+}
+
+.sc-chat__meta {
+    font-size: 11px;
+    color: var(--sc-chat-muted);
+    margin-top: 3px;
+    padding: 0 4px;
+}
+
+.sc-chat__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.sc-chat__intro-text {
+    margin: 0 0 4px;
+    color: var(--sc-chat-muted);
+    font-size: 13px;
+}
+
+.sc-chat input,
+.sc-chat textarea {
+    width: 100%;
+    border: 1px solid var(--sc-chat-border);
+    border-radius: 8px;
+    padding: 9px 12px;
+    font: inherit;
+    color: inherit;
+    background: #fff;
+    resize: none;
+    margin: 0;
+    height: auto;
+}
+
+.sc-chat .sc-chat__hp {
+    position: absolute !important;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.sc-chat__btn {
+    border: 0;
+    border-radius: 8px;
+    background: var(--sc-chat-primary);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.sc-chat__btn:disabled,
+.sc-chat__send:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.sc-chat__notice {
+    padding: 8px 14px;
+    font-size: 12px;
+    background: #fff7ed;
+    color: #9a3412;
+    border-top: 1px solid #fed7aa;
+}
+
+.sc-chat__composer {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid var(--sc-chat-border);
+    background: #fff;
+}
+
+.sc-chat__composer textarea {
+    max-height: 120px;
+    min-height: 40px;
+}
+
+.sc-chat__send {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--sc-chat-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sc-chat__ended {
+    padding: 12px 14px;
+    border-top: 1px solid var(--sc-chat-border);
+    background: #fff;
+    text-align: center;
+}
+
+.sc-chat__ended p {
+    margin: 0 0 8px;
+    color: var(--sc-chat-muted);
+    font-size: 13px;
+}
+
+[dir="rtl"] .sc-chat__send svg {
+    transform: scaleX(-1);
+}
+
+/* Phones: full-screen panel. */
+@media (max-width: 575px) {
+    .sc-chat__panel {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        border-radius: 0;
+    }
+
+    .sc-chat.is-open .sc-chat__launcher {
+        display: none;
+    }
+
+    .sc-chat input,
+    .sc-chat textarea {
+        font-size: 16px; /* prevents iOS zoom on focus */
+    }
+}

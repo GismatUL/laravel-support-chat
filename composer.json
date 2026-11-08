@@ -1,0 +1,58 @@
+{
+    "name": "gmammadov/laravel-support-chat",
+    "description": "Website live-chat widget for Laravel where your team answers from Telegram or from an admin panel.",
+    "keywords": [
+        "laravel",
+        "chat",
+        "live-chat",
+        "support",
+        "telegram",
+        "widget",
+        "helpdesk"
+    ],
+    "homepage": "https://github.com/GismatUL/laravel-support-chat",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gismat Mammadov",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0|^12.0|^13.0",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.0|^11.0|^12.0"
+    },
+    "suggest": {
+        "gmammadov/nova-support-chat": "Laravel Nova admin panel for the support chat."
+    },
+    "autoload": {
+        "psr-4": {
+            "Gmammadov\\SupportChat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gmammadov\\SupportChat\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gmammadov\\SupportChat\\SupportChatServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
