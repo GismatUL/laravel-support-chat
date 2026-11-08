@@ -21,26 +21,63 @@ The install command publishes `config/support-chat.php`, runs the migrations and
 
 ### 1. Telegram
 
-1. Create a bot with [@BotFather](https://t.me/BotFather). Send `/setprivacy` → *Disable* so the bot can read your operators' replies.
-2. Create a group for your support team and add the bot. Get the group id (e.g. by adding [@RawDataBot](https://t.me/RawDataBot) for a moment, it looks like `-100…`).
-3. Add to `.env`:
+You need four values. Get them in this order: steps 2 and 4 read the group's recent messages, which only works **before** the webhook is registered in step 5.
 
 ```dotenv
-SUPPORT_CHAT_TELEGRAM_BOT_TOKEN=123456:ABC...
-SUPPORT_CHAT_TELEGRAM_CHAT_ID=-1001234567890
-SUPPORT_CHAT_TELEGRAM_WEBHOOK_SECRET=<random 16-256 chars of A-Z a-z 0-9 _ ->
-# Optional: only these Telegram user ids may answer customers
-SUPPORT_CHAT_TELEGRAM_OPERATOR_IDS=11111111,22222222
+SUPPORT_CHAT_TELEGRAM_BOT_TOKEN=        # step 1
+SUPPORT_CHAT_TELEGRAM_CHAT_ID=          # step 2
+SUPPORT_CHAT_TELEGRAM_WEBHOOK_SECRET=   # step 3
+SUPPORT_CHAT_TELEGRAM_OPERATOR_IDS=     # step 4, optional
 ```
 
-4. Register the webhook (your app must be reachable over HTTPS):
+**Step 1: create the bot and get the token (`SUPPORT_CHAT_TELEGRAM_BOT_TOKEN`)**
+
+1. In Telegram, open [@BotFather](https://t.me/BotFather) (Telegram's official bot for creating bots; check for the blue verified tick) and send `/newbot`.
+2. Send a display name, e.g. `Example Support`, then a username that ends in `bot`, e.g. `example_support_bot`.
+3. BotFather replies with a token like `7123456789:AAH-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`. That whole string is the token.
+
+Treat the token like a password: anyone who has it controls the bot. Keep it only in `.env`. If it leaks, send `/revoke` to BotFather to get a new one.
+
+**Step 2: create the support group and get its id (`SUPPORT_CHAT_TELEGRAM_CHAT_ID`)**
+
+1. Create a Telegram group for your support team (*New Group*) and add the bot by its username.
+2. Send any message in the group, e.g. `hello`.
+3. Open this address in a browser, with your token in place of `<TOKEN>`:
+
+   ```
+   https://api.telegram.org/bot<TOKEN>/getUpdates
+   ```
+
+4. In the response, find `"chat":{"id":-100…,"title":"<your group name>"…}`. That negative number, including the minus sign, is the chat id.
+
+If the response is `{"ok":true,"result":[]}`, send another message in the group and reload. If it still stays empty, a webhook is already set: run `php artisan support-chat:telegram-webhook --delete` and try again.
+
+The id changes if Telegram converts the group to a *supergroup* (for example when you enable topics or make the history visible to new members). Check the id again after changing group settings.
+
+**Step 3: make up the webhook secret (`SUPPORT_CHAT_TELEGRAM_WEBHOOK_SECRET`)**
+
+You don't get this from Telegram; you generate it. Telegram sends it back with every update, so the app can reject requests that don't come from Telegram. Any random 16 to 256 characters of `A-Z a-z 0-9 _ -`:
+
+```bash
+php -r "echo bin2hex(random_bytes(32)), PHP_EOL;"
+```
+
+**Step 4 (optional): operator user ids (`SUPPORT_CHAT_TELEGRAM_OPERATOR_IDS`)**
+
+Leave this empty to let every member of the group answer customers. To allow only certain people, have each operator send a message in the group, reload the `getUpdates` address from step 2, and copy each `"from":{"id":…}` number (a positive number, not the group id). Separate them with commas: `11111111,22222222`.
+
+**Step 5: register the webhook**
+
+Your app must be reachable over public HTTPS, with `APP_URL` set to that address, so this is usually done on the server:
 
 ```bash
 php artisan support-chat:telegram-webhook          # set
-php artisan support-chat:telegram-webhook --info   # inspect
+php artisan support-chat:telegram-webhook --info   # check: shows the URL and the last error, if any
 ```
 
-Operators answer by using Telegram's **Reply** on a customer message. Replying `/close` closes the conversation.
+**How operators answer:** use Telegram's **Reply** on a customer's message in the group. Replying `/close` closes the conversation. Messages that aren't replies to the bot are ignored.
+
+The bot's *privacy mode* can stay on (the default): bots always receive replies to their own messages. If replies don't reach the site, send `/setprivacy` → *Disable* to BotFather, then remove the bot from the group and add it again (the change only applies after re-adding).
 
 ### 2. Scheduler
 
