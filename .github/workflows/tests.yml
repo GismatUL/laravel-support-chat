@@ -16,10 +16,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { php: '8.1', laravel: '10.*', testbench: '8.*' }
-          - { php: '8.2', laravel: '11.*', testbench: '9.*' }
-          - { php: '8.3', laravel: '12.*', testbench: '10.*' }
-          - { php: '8.4', laravel: '13.*', testbench: '11.*' }
+          # Laravel 10 and 11 are end-of-life with unpatched advisories, which Composer >= 2.9 refuses
+          # to install by default. Apps still run them, so we keep testing against them.
+          - { php: '8.1', laravel: '10.*', testbench: '8.*', eol: true }
+          - { php: '8.2', laravel: '11.*', testbench: '9.*', eol: true }
+          - { php: '8.3', laravel: '12.*', testbench: '10.*', eol: false }
+          - { php: '8.4', laravel: '13.*', testbench: '11.*', eol: false }
 
     name: PHP ${{ matrix.php }} / Laravel ${{ matrix.laravel }}
 
@@ -33,6 +35,8 @@ jobs:
           coverage: none
 
       - name: Install dependencies
+        env:
+          COMPOSER_NO_SECURITY_BLOCKING: ${{ matrix.eol && '1' || '' }}
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --prefer-dist --no-interaction --no-progress --with-all-dependencies
